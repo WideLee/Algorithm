@@ -6,7 +6,7 @@ Given an array of integers and an integer k, find out whether there there are tw
 >Tags: `Array` `Hash Table`
 
 ###题目分析
-找到两个相同的元素位置分别为$i, j$使得他们的位置差不超过$k$
+找到两个相同的元素位置分别为i, j使得他们的位置差不超过k
 ###我的解题思路
 使用Map，使用元素的值作为Key，他们在数组的位置作为Value，在遍历数组的过程中，如果有相同的元素加到Map中，就可以对比他们的位置，如果满足条件，返回true，如果不满足，更新当前元素值的位置继续遍历。
 
