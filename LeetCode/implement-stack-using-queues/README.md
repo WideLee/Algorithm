@@ -15,6 +15,8 @@ Notes:
 - Depending on your language, queue may not be supported natively. You may simulate a queue by using a list or deque (double-ended queue), as long as you use only standard operations of a queue.
 - You may assume that all operations are valid (for example, no pop or top operations will be called on an empty stack).
 
+> Tags: ` Stack ` `Data Structure`
+
 ###题目分析
 使用队列来实现栈的基本操作。
 
