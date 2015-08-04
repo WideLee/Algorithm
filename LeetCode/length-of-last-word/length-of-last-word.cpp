@@ -12,7 +12,7 @@ using namespace std;
 
 class Solution {
 public:
-    int lengthOfLastWord(string s) {
+    int lengthOfLastWord_normal(string s) {
         int result = 0;
         int length = 0;
         for (int i = 0; i < s.length(); i++) {
@@ -30,10 +30,27 @@ public:
         }
         return result;
     }
+    
+    int lengthOfLastWord(string s) {
+        int result = 0;
+        int length = s.length();
+        for(int i = length - 1; i >= 0; i--) {
+            if(s[i] == ' ') {
+                if(result == 0) {
+                    continue;
+                } else {
+                    break;
+                }
+            }
+            
+            result ++;
+        }
+        return result;
+    }
 };
 
 int main() {
     Solution sol;
-    cout << sol.lengthOfLastWord("a") << endl;
+    cout << sol.lengthOfLastWord("abc  aaaaaa") << endl;
     return 0;
 }
