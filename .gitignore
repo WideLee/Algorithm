@@ -1,3 +1,9 @@
 # OS X DS file
 .DS_*
 
+.idea/
+cmake-build-debug/
+CMakeFiles/
+cmake_install.cmake
+*.cbp
+Makefile
