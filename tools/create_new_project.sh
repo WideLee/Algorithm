@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 function check_name() {
-	if [ "$1" == "" ]; then
+	if [[ "$1" == "" ]]; then
 		echo "Project name cannot be empty"
 		return 1
 	else
@@ -19,11 +19,10 @@ mode=`echo $1 | tr '[:upper:]' '[:lower:]'`
 name=$2
 
 
-
 case $mode in
 	"sicily" )
 		check_name $name
-		if [ "$?" == "0" ]; then
+		if [[ "$?" == "0" ]]; then
 			printf "$cpp_template" > $sicily_dir/$name.cpp
 			echo "add_executable($name $name.cpp)" >> $sicily_dir/CMakeLists.txt
 		fi
@@ -31,7 +30,7 @@ case $mode in
 		;;
 	"leetcode" )
 		check_name $name
-		if [ "$?" == "0" ]; then
+		if [[ "$?" == "0" ]]; then
 			echo "create testcase $name"
 			mkdir $leetcode_dir/$name
 			touch $leetcode_dir/$name/README.md
